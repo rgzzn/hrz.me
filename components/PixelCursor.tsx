@@ -98,7 +98,7 @@ const PixelCursor: React.FC = () => {
   return (
     <canvas 
       ref={canvasRef} 
-      className="fixed inset-0 pointer-events-none z-50 mix-blend-screen"
+      className="hidden md:block fixed inset-0 pointer-events-none z-50 mix-blend-screen"
     />
   );
 };

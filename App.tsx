@@ -48,10 +48,11 @@ const App: React.FC = () => {
         
         // Calculate displacements (Magnetic Effect)
         // We apply this to the OUTER wrapper (the ref)
-        const tx1 = dist1 < maxDist ? (mousePos.current.x - p1Base.x) * force * (1 - dist1/maxDist) : 0;
-        const ty1 = dist1 < maxDist ? (mousePos.current.y - p1Base.y) * force * (1 - dist1/maxDist) : 0;
-        const tx2 = dist2 < maxDist ? (mousePos.current.x - p2Base.x) * force * (1 - dist2/maxDist) : 0;
-        const ty2 = dist2 < maxDist ? (mousePos.current.y - p2Base.y) * force * (1 - dist2/maxDist) : 0;
+        const isMobile = window.innerWidth < 768;
+        const tx1 = (!isMobile && dist1 < maxDist) ? (mousePos.current.x - p1Base.x) * force * (1 - dist1/maxDist) : 0;
+        const ty1 = (!isMobile && dist1 < maxDist) ? (mousePos.current.y - p1Base.y) * force * (1 - dist1/maxDist) : 0;
+        const tx2 = (!isMobile && dist2 < maxDist) ? (mousePos.current.x - p2Base.x) * force * (1 - dist2/maxDist) : 0;
+        const ty2 = (!isMobile && dist2 < maxDist) ? (mousePos.current.y - p2Base.y) * force * (1 - dist2/maxDist) : 0;
 
         // Apply magnetic movement to the wrapper
         orb1Ref.current.style.transform = `translate(${tx1}px, ${ty1}px)`;
