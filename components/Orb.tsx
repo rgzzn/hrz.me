@@ -60,7 +60,7 @@ const Orb = React.forwardRef<HTMLDivElement, OrbProps>(({ label, href, position,
                   <span className={`absolute top-0 left-0 ml-[2px] text-blue-500 opacity-0 group-hover:opacity-70 group-hover:animate-pulse animation-delay-75`}>{label}</span>
               </span>
               
-              <div className={`absolute bottom-8 flex items-center gap-1 text-[10px] uppercase tracking-widest text-white/60 transition-all duration-500 transform opacity-100 translate-y-0 md:opacity-0 md:translate-y-8 ${isHovered ? 'md:translate-y-0 md:opacity-100' : ''}`}>
+              <div className={`flex items-center gap-1 text-[10px] uppercase tracking-widest text-white/60 transition-all duration-500 transform mt-2 md:mt-0 md:absolute md:bottom-8 opacity-100 translate-y-0 md:opacity-0 md:translate-y-8 ${isHovered ? 'md:translate-y-0 md:opacity-100' : ''}`}>
                   <span>{subLabel || 'Open'}</span>
                   <ArrowUpRight size={10} />
               </div>
