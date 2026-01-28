@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is not a website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Loading readable but bizarre fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Audiowide&family=Bangers&family=Chakra+Petch:wght@400;700&family=Comfortaa:wght@700&family=Inter:wght@400;800&family=Orbitron:wght@400;900&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,400&family=Press+Start+2P&family=Righteous&family=Rye&family=Silkscreen&family=Slackey&family=Space+Mono:ital,wght@0,400;1,700&family=Special+Elite&family=Syne+Mono&family=VT323&family=Wallpoet&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#050505',
+              primary: '#8b5cf6', // Violet
+              secondary: '#c026d3', // Fuchsia
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              mono: ['Space Mono', 'monospace'],
+              pixel: ['"Press Start 2P"', 'cursive'],
+              terminal: ['VT323', 'monospace'],
+              
+              // New Readable Bizarre Fonts
+              digital: ['Silkscreen', 'cursive'],      // Clean Pixel
+              comic: ['Bangers', 'display'],           // Bold Comic
+              western: ['Rye', 'serif'],               // Heavy Western
+              future: ['"Chakra Petch"', 'sans-serif'],// Sci-Fi Angular
+              elegant: ['"Abril Fatface"', 'serif'],   // Heavy Didone
+              typewriter: ['"Special Elite"', 'monospace'], // Grungy Typewriter
+              syne: ['"Syne Mono"', 'monospace'],      // Weird Mono
+              marker: ['"Permanent Marker"', 'cursive'], // Sharp Marker
+              scifi: ['Orbitron', 'sans-serif'],       // Space
+              tech: ['Audiowide', 'sans-serif'],       // Wide Tech
+              stencil: ['Wallpoet', 'display'],        // Military Stencil
+              bloat: ['Righteous', 'display'],         // Soft Techno
+              rounded: ['Comfortaa', 'sans-serif'],    // Ultra Round
+              funky: ['Slackey', 'display'],           // Chunky Fun
+            },
+            animation: {
+              'float-slow': 'float 8s ease-in-out infinite',
+              'float-medium': 'float 6s ease-in-out infinite',
+              'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+              'scanline': 'scanline 8s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { opacity: '0.4', filter: 'blur(20px)' },
+                '50%': { opacity: '0.8', filter: 'blur(25px)' },
+              },
+              scanline: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' }
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            overflow: hidden; /* Prevent scrollbars for the canvas/cursor */
+            cursor: none; /* Hide default cursor */
+        }
+        /* Hide scrollbar */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* CRT Scanline Effect */
+        .scanline::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0) 50%,
+                rgba(0, 0, 0, 0.2) 50%,
+                rgba(0, 0, 0, 0.2)
+            );
+            background-size: 100% 4px;
+            z-index: 50;
+            pointer-events: none;
+        }
+        
+        .vignette {
+            background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%);
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
