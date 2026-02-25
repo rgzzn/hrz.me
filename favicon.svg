@@ -1,3 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <polygon points="50,10 93.3,85 6.7,85" fill="#ccff00"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <rect width="64" height="64" fill="#000"/>
+  <path fill="#a3ff00" d="M32 6 58 54H6z"/>
 </svg>
