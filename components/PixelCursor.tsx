@@ -9,7 +9,7 @@ const PixelCursor: React.FC = () => {
   // Configuration
   const TRAIL_LENGTH = 30;
   const PIXEL_SIZE = 8;
-  const COLORS = ['#8b5cf6', '#c026d3', '#ffffff', '#4c1d95'];
+  const COLORS = ['#abff00', '#d3ff6e', '#f1ffcf', '#6ea300'];
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -77,7 +77,7 @@ const PixelCursor: React.FC = () => {
       ctx.fillRect(cx, cy, PIXEL_SIZE, PIXEL_SIZE);
       
       // Crosshair arms
-      ctx.fillStyle = '#8b5cf6'; // Primary Purple
+      ctx.fillStyle = '#abff00'; // Electric lime accent
       ctx.fillRect(cx - PIXEL_SIZE, cy, PIXEL_SIZE, PIXEL_SIZE);
       ctx.fillRect(cx + PIXEL_SIZE, cy, PIXEL_SIZE, PIXEL_SIZE);
       ctx.fillRect(cx, cy - PIXEL_SIZE, PIXEL_SIZE, PIXEL_SIZE);
